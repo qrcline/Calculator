@@ -17,11 +17,9 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_button_7_clicked();
 
-    void on_pushButton_17_clicked();
 
-    void on_pushButton_18_clicked();
+
 
     void on_pushButton_divide_clicked();
 
@@ -49,8 +47,16 @@ private slots:
 
     void on_pushButton_plus_clicked();
 
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_6_clicked();
+
 private:
     Ui::MainWindow *ui;
+     CalcModel calcModel;
+     void updateWindow();
 };
 
 #endif // MAINWINDOW_H
