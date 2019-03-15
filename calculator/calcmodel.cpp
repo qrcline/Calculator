@@ -21,7 +21,7 @@ void CalcModel::processUserInput(QString input)
         {
             _currentValue=0;
         }
-        else if ((input.toInt()<10 && input.toInt()>0)||input==0)
+        else if ((input.toInt()<10 && input.toInt()>0)||input=="0")
         {
             _currentValue=input.toInt();
            _state=1;
@@ -44,7 +44,7 @@ void CalcModel::processUserInput(QString input)
             _state=0;
              std::cout<<"Case 1.1"<<std::endl;
         }
-        else if ((input.toInt()<10 && input.toInt()>0)||input==0)
+        else if ((input.toInt()<10 && input.toInt()>0)||input=="0")
         {
             _currentValue=_currentValue*10;
             _currentValue+=input.toInt();
@@ -66,7 +66,7 @@ void CalcModel::processUserInput(QString input)
             _currentValue=0;
               _state=0;
         }
-        else if ((input.toInt()<10 && input.toInt()>0)||input==0)
+        else if ((input.toInt()<10 && input.toInt()>0)||input=="0")
         {    
             _currentValue=input.toInt();
 
@@ -86,7 +86,7 @@ void CalcModel::processUserInput(QString input)
             _currentValue=0;
             _state=0;
         }
-        else if ((input.toInt()<10 && input.toInt()>0)||input==0)
+        else if ((input.toInt()<10 && input.toInt()>0)||input=="0")
         {
             _currentValue=_currentValue*10;
             _currentValue+=input.toInt();
@@ -94,6 +94,8 @@ void CalcModel::processUserInput(QString input)
         }
         else if (input=="+"||input=="-"||input=="*"||input=="/")
         {
+              _currentValue= calculator(_operand1,_currentValue,_operator);
+              _operand1=_currentValue;
             _operator=input;
             _state=2;
         }
