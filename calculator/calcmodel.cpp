@@ -114,7 +114,7 @@ QString CalcModel::getCurrentValue()
     return QString::number(_currentValue);
 }
 
-int CalcModel::calculator(int x, int y, QString inputOp)
+float CalcModel::calculator(float x, float y, QString inputOp)
 {
     switch(inputOp.toStdString()[0])
         {
