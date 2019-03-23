@@ -13,13 +13,13 @@ public:
 
 private:
     int _state;
-    int _currentValue;
-    int _outputValue;
-    int _operand1;
+    float _currentValue;
+    float _outputValue;
+    float _operand1;
 
     QString _operator;
     QString _display;
-    int calculator(int value1, int value2, QString inputOp);
+    float calculator(float value1, float value2, QString inputOp);
 };
 
 #endif // CALCMODEL_H
