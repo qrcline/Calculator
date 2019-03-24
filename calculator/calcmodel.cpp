@@ -111,10 +111,10 @@ void CalcModel::processUserInput(QString input)
 
 QString CalcModel::getCurrentValue()
 {
-    return QString::number(_currentValue);
+    return QString::number(_currentValue, 'b', 2);
 }
 
-int CalcModel::calculator(int x, int y, QString inputOp)
+float CalcModel::calculator(float x, float y, QString inputOp)
 {
     switch(inputOp.toStdString()[0])
         {
